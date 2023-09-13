@@ -17,22 +17,23 @@ const ProductSwitcher = ({setLightBox, mainImg,setMainImg}) => {
       }
     
     const handleImg= (e)=>{
-      switch (e.target.name) {
+      const name = e.target.dataset.name
+      switch (name) {
         case 'thumbnail1':
           setMainImg(products.product1)
-          setActiveImg(e.target.name)
+          setActiveImg(name)
           break;
           case 'thumbnail2':
             setMainImg(products.product2)
-            setActiveImg(e.target.name)
+            setActiveImg(name)
             break;
             case 'thumbnail3':
               setMainImg(products.product3)
-              setActiveImg(e.target.name)
+              setActiveImg(name)
               break;
               case 'thumbnail4':
                 setMainImg(products.product4)
-                setActiveImg(e.target.name)
+                setActiveImg(name)
                 break;
       
         default: setMainImg(products.product1)
@@ -59,17 +60,17 @@ const ProductSwitcher = ({setLightBox, mainImg,setMainImg}) => {
       <div className='flex gap-7 product h-[70px] max-[1050px]:hidden'>
 
       <div className={`cursor-pointer ${activeImg === 'thumbnail1'? 'active' : 'not-active'}`}>
-      <img  src={products.thumbnail1} name='thumbnail1' onClick={handleImg} alt="thumbnail" />
+      <img  src={products.thumbnail1} data-name='thumbnail1' onClick={handleImg} alt="thumbnail" />
       </div>
       <div className={`cursor-pointer ${activeImg === 'thumbnail2'? 'active' : 'not-active'}`}>
-      <img  src={products.thumbnail2} name='thumbnail2' onClick={handleImg} alt="thumbnail" />
+      <img  src={products.thumbnail2} data-name='thumbnail2' onClick={handleImg} alt="thumbnail" />
       </div>
       <div className={`cursor-pointer ${activeImg === 'thumbnail3'? 'active' : 'not-active'}`}>
-      <img src={products.thumbnail3} name='thumbnail3' onClick={handleImg} alt="thumbnail" />
+      <img src={products.thumbnail3} data-name='thumbnail3' onClick={handleImg} alt="thumbnail" />
 
       </div>
       <div className={`cursor-pointer ${activeImg === 'thumbnail4'? 'active' : 'not-active'}`}>
-      <img  src={products.thumbnail4} name='thumbnail4' onClick={handleImg} alt="thumbnail" />
+      <img  src={products.thumbnail4} data-name='thumbnail4' onClick={handleImg} alt="thumbnail" />
       </div>
 
       </div>
