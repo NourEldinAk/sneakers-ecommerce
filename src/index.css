@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+
+}
+p{
+  font-size: 16px;
+}
+html,body, #root{
+  height: 100%;
+  width: 100%
+}
+.cart-icon{
+  filter: brightness(0) invert(1);
+
+}
+
+.cart-menu{
+  top: 80px;
+   left:-140px;
+   
+}
+.cart-number-position{
+  top:30px;
+  left:6px;
+}
+@media screen and (max-width:1050px) {
+  .cart-number-position{
+    top:-5px;
+    left:6px;
+  }
+}
+
+@media screen and (max-width:1050px) {
+  .cart-menu{
+    top: 50px;
+    width: 350px;
+     left: -263px;
+     
+  }
+}
+
+
+
+.right_cursor{
+  right:-18px
+}
+.left_cursor{
+  left:-18px
+}
+
+.right_cursor_mobile{
+  top: 160px;
+  right:40px
+}
+.left_cursor_mobile{
+  top: 160px;
+  left:40px
+}
+
+.box-shadow:active{
+  box-shadow: -3px 9px 22px -6px #ff7d1a ;
+}
+
+.cart-menu-shadow{
+  box-shadow: 0px 8px 30px -8px gray;
+}
+.mobile-cart{
+  width: 400px;
+  left: 40px;
+}
+.position-menu{
+  left:-10px;
+  
+}
+
+
+.sidebar {
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+}
+
+@layer components{
+  .product img{
+   @apply rounded-xl w-[74px] 
+  }
+  .add-button{
+    @apply bg-[#f7f8fd] px-5 font-semibold  max-[1050px]:w-[33%]  max-[1050px]:text-center
+  }
+  .mobile-design{
+    @apply flex-col w-[375px] items-center px-0 gap-1
+  }
+  .mobile-design-container{
+    @apply h-[1300px] w-[375px]
+  }
+  .mobile-img{
+    @apply rounded-none w-[375px] mx-auto
+  }
+  .mobile-content-design{
+    @apply w-[375px]
+  }
+  .mobile-content-design h2{
+    @apply text-3xl
+  }
+  .active{
+    @apply  border-[2px] rounded-xl flex border-primary h-[74px] bg-white
+  }
+  .active img{
+    @apply opacity-40
+  }
+  .cursor{
+    @apply bg-gray-50 p-4 rounded-full flex
+  }
+
+  .cart-button{
+    @apply px-10 py-4 w-4/5 justify-center
+    text-white font-semibold text-sm bg-primary flex
+     gap-3 items-center rounded-lg  max-[1050px]:w-full
+     active:opacity-50 
+  }
+  .plus-minus-active img{
+    @apply opacity-50
+  }
+}
