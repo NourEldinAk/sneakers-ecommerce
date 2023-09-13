@@ -35,11 +35,16 @@ const NavbarDesktop = () => {
             <img src={menu} onClick={handleOpenMenu} width={20} className='min-[1050px]:hidden cursor-pointer'  alt="menu" />
             <img src={sneakers_logo} width={130} alt="logo" />
             <ul className=' max-[1050px]:hidden flex gap-8 text-sm text-darkGrayish my-auto ml-2 h-full'>
-                <a className='py-9 hover:border-b-2 border-primary cursor-pointer'>Collections</a>
-                <a className='py-9 hover:border-b-2 border-primary cursor-pointer'>Men</a>
-                <a className='py-9 hover:border-b-2 border-primary cursor-pointer'>Women</a>
-                <a className='py-9 hover:border-b-2 border-primary cursor-pointer'>About</a>
-                <a className='py-9 hover:border-b-2 border-primary cursor-pointer'>Contact</a>
+            <li className='py-9'><a className='py-9 hover:border-b-2 border-primary cursor-pointer'>Collections</a></li>
+            <li className='py-9'> <a className='py-9 hover:border-b-2 border-primary cursor-pointer'>Men</a></li>
+            <li className='py-9'> <a className='py-9 hover:border-b-2 border-primary cursor-pointer'>Women</a></li>
+            <li className='py-9'><a className='py-9 hover:border-b-2 border-primary cursor-pointer'>About</a></li>
+            <li className='py-9'><a className='py-9 hover:border-b-2 border-primary cursor-pointer'>Contact</a></li>
+                
+               
+               
+                
+                
             </ul>
         </div>
         <div className="flex mr-14 pr-6 relative items-center">
